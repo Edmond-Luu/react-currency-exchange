@@ -1,8 +1,75 @@
-body {
-  box-sizing: border-box;
+html {
+  background-color: rgb(6, 67, 4);
+
 }
 
-.spacer{
-  display: inline;
-  margin: 0 25px;
+body {
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+  ;
+}
+
+.title{
+  font-size: 35px;
+  text-align: center;
+}
+
+.app {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.box{
+  padding: 25px
+}
+
+.input {
+  width: 400px;
+}
+
+.select {
+  width: 450px;
+}
+
+.fromForm {
+  margin-bottom: 3vh;
+}
+
+#footer{
+  display: flex;
+  height: 100px;
+  background-color: rgb(9, 9, 49);
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  margin-top: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+a{
+  color: white;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+@media (min-width: 870px){
+  .input{
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 950px) {
+  .select {
+    width: 400px;
+  }
+}
+
+@media (max-width: 900px) {
+  .app {
+    text-align: center
+  }
 }
