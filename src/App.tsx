@@ -7,11 +7,11 @@ function App() {
   const [inverse, setInverse] = React.useState <boolean> (false)
   const [rate, setRate] = React.useState <number> (0)
 
-  const [fromSel, setFromSel] = React.useState()
-  const [toSel, setToSel] = React.useState()
+  const [fromSel, setFromSel] = React.useState("")
+  const [toSel, setToSel] = React.useState("")
 
   const [allCurr, setAllCurr] = React.useState <{}[]> ([])
-  const [currNames, setCurrNames] = React.useState <string[]> ([])
+  const [currNames, setCurrNames] = React.useState([])
 
 
   let toVal, fromVal
