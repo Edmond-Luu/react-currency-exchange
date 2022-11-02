@@ -3,15 +3,15 @@ import Form from "./Form"
 
 function App() {
 
-  const [val, setVal] = React.useState(1)
-  const [inverse, setInverse] = React.useState(false)
-  const [rate, setRate] = React.useState()
+  const [val, setVal] = React.useState <number> (1)
+  const [inverse, setInverse] = React.useState <boolean> (false)
+  const [rate, setRate] = React.useState <number> (0)
 
   const [fromSel, setFromSel] = React.useState()
   const [toSel, setToSel] = React.useState()
 
-  const [allCurr, setAllCurr] = React.useState([])
-  const [currNames, setCurrNames] = React.useState([])
+  const [allCurr, setAllCurr] = React.useState <{}[]> ([])
+  const [currNames, setCurrNames] = React.useState <string[]> ([])
 
 
   let toVal, fromVal
@@ -50,12 +50,12 @@ function App() {
     }
   }, [fromSel, toSel])
 
-  function handleFromChange(event) {
+  function handleFromChange(event: {target: {valueAsNumber: number}}) {
     setVal(event.target.valueAsNumber)
     setInverse(false)
   }
 
-  function handleToChange(event) {
+  function handleToChange(event: {target: {valueAsNumber: number}}) {
     setVal(event.target.valueAsNumber)
     setInverse(true)
   }
